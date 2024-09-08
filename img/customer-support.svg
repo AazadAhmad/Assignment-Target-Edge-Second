@@ -1,0 +1,10 @@
+<svg width="61.125rem" height="21.9375rem" class="acf-block-cta__decor-svg acf-block-cta__decor-svg--desktop d-none d-lg-block" viewBox="0 0 978 351" fill="none" xmlns="http://www.w3.org/2000/svg">
+<title>Call to action decor</title>
+<path d="M45 351L45.0001 316.123C45.0002 282.986 71.863 256.123 105 256.123L194 256.123C227.137 256.122 254 229.26 254 196.123L254 105C254 71.8629 280.863 45 314 45L1050 45" stroke="url(#acf-block-cta-block_af06982ae2569d85cd8e3a80847a1a3d-1)" stroke-width="90" stroke-linecap="round"></path>
+<defs>
+<linearGradient id="acf-block-cta-block_af06982ae2569d85cd8e3a80847a1a3d-1" x1="531.438" y1="50.417" x2="531.691" y2="348.811" gradientUnits="userSpaceOnUse">
+<stop offset="0" stop-color="#6BDAB6"></stop>
+<stop offset="1" stop-color="#66E0F6"></stop>
+</linearGradient>
+</defs>
+</svg>
