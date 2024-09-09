@@ -1,4 +1,3 @@
-
 // var lastScrollTop = 0;
 // $(window).scroll(function(event){
 //    var st = $(this).scrollTop();
@@ -12,35 +11,33 @@
 //    lastScrollTop = st;
 // });
 var lastScrollTop = 0;
-$(window).scroll(function(event){
-   var st = $(this).scrollTop();
-   
-   if (st === 0) {
-      // Remove 'fixed' class when at the top
-      $('header').removeClass('fixed no-fixed');
-   } else if (st > lastScrollTop) {
-      // Scrolling down
-      $('header').removeClass('fixed');
-      $('header').addClass('no-fixed');
-   } else {
-      // Scrolling up
-      $('header').addClass('fixed');
-      $('header').removeClass('no-fixed');
-   }
-   
-   lastScrollTop = st;
+$(window).scroll(function (event) {
+  var st = $(this).scrollTop();
+
+  if (st === 0) {
+    // Remove 'fixed' class when at the top
+    $("header").removeClass("fixed no-fixed");
+  } else if (st > lastScrollTop) {
+    // Scrolling down
+    $("header").removeClass("fixed");
+    $("header").addClass("no-fixed");
+  } else {
+    // Scrolling up
+    $("header").addClass("fixed");
+    $("header").removeClass("no-fixed");
+  }
+
+  lastScrollTop = st;
 });
 
-
-
 $(document).ready(function () {
-  $('.burger').click(function () {
-    $('.burger').toggleClass('clicked');
+  $(".burger").click(function () {
+    $(".burger").toggleClass("clicked");
     // $('.navbar-collapse').slideToggle('navbar-collapse-open');
   });
-  $('.nav-link').click(function () {
-      $('.show').toggleClass('show');
-      $('.burger').removeClass('clicked');
+  $(".nav-link").click(function () {
+    $(".show").toggleClass("show");
+    $(".burger").removeClass("clicked");
   });
 
   var featured_slider = new Swiper(".featured-slider", {
@@ -53,14 +50,13 @@ $(document).ready(function () {
     watchSlidesProgress: true,
     pagination: {
       el: ".swiper-pagination",
-      type: 'bullets',
+      type: "bullets",
       clickable: true,
     },
   });
-  
 
   var swiper = new Swiper(".report-slider-nav", {
-    spaceBetween: 10,
+    spaceBetween: 25,
     slidesPerView: 5,
     loop: true,
     watchSlidesProgress: true,
@@ -77,8 +73,6 @@ $(document).ready(function () {
     },
   });
 
-
-
   document.querySelectorAll("[Heading]").forEach((heading) => {
     new SplitType(heading, { types: "lines, words, chars", tagName: "c" });
     gsap.from(heading.querySelectorAll(".word"), {
@@ -90,11 +84,10 @@ $(document).ready(function () {
       scrollTrigger: {
         trigger: heading,
         start: "top 90%",
-        toggleActions: "play none none reverse"
-      }
+        toggleActions: "play none none reverse",
+      },
     });
   });
-
 
   document.querySelectorAll("[description]").forEach((description) => {
     new SplitType(description, { types: "lines, words, chars", tagName: "c" });
@@ -107,8 +100,8 @@ $(document).ready(function () {
       scrollTrigger: {
         trigger: description,
         start: "top 80%",
-        toggleActions: "play none none reverse"
-      }
+        toggleActions: "play none none reverse",
+      },
     });
   });
 
@@ -121,12 +114,11 @@ $(document).ready(function () {
       scrollTrigger: {
         trigger: ira,
         start: "top 100%",
-        toggleActions: "play none none none"
-      }
+        toggleActions: "play none none none",
+      },
     });
   });
 
- 
   document.querySelectorAll(".btn-animate").forEach((button) => {
     gsap.from(button, {
       y: "50%",
@@ -136,12 +128,10 @@ $(document).ready(function () {
       scrollTrigger: {
         trigger: button,
         start: "top 90%",
-        toggleActions: "play none none reverse"
-      }
+        toggleActions: "play none none reverse",
+      },
     });
   });
-
-
 
   document.querySelectorAll(".box-animation").forEach((box) => {
     gsap.from(box, {
@@ -152,8 +142,8 @@ $(document).ready(function () {
       scrollTrigger: {
         trigger: box,
         start: "left 80%",
-        toggleActions: "play none none reverse"
-      }
+        toggleActions: "play none none reverse",
+      },
     });
   });
   document.querySelectorAll(".img-animation").forEach((img) => {
@@ -165,18 +155,17 @@ $(document).ready(function () {
       scrollTrigger: {
         trigger: img,
         start: "top 80%",
-        toggleActions: "play none none reverse"
-      }
+        toggleActions: "play none none reverse",
+      },
     });
   });
-
 
   // gsap.from(".buy-it", {
   //   y: "100%",
   //   opacity: 0,
   //   duration: 1,
   //   ease: "power1.out",
-  //   stagger: 0.2,  
+  //   stagger: 0.2,
   //   scrollTrigger: {
   //       trigger: ".buy-it",
   //       start: "top 100%",
@@ -184,22 +173,18 @@ $(document).ready(function () {
   //   }
   // });
 
-
   let tl = gsap.timeline({
     scrollTrigger: {
-      trigger: ".timeline",     
-      scrub: 1,               
-      start: "top 50%",         
-      end: "bottom+=1000 top",     
-    }
-  });
-  
-  tl.to('.grow-line', {
-    scaleY: 1,                  
-    ease: "none",              
-    duration: 1                 
+      trigger: ".timeline",
+      scrub: 1,
+      start: "top 50%",
+      end: "bottom+=1000 top",
+    },
   });
 
-  
-
-})
+  tl.to(".grow-line", {
+    scaleY: 1,
+    ease: "none",
+    duration: 1,
+  });
+});
