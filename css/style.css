@@ -154,10 +154,6 @@ label{
 /** Header Start **/
 header {
     padding: 0.7em 0;
-    /* position: fixed;
-    width: 100%;
-    z-index: 99;
-    top: 0; */
 }
 
 .navbar-brand img {
@@ -201,7 +197,6 @@ header a.nav-link {
     z-index: 999;
     box-shadow: 0 5px 10px rgb(0 0 0 / 8%);
 }
-
 /** Header End **/
 
 /**Banner Start**/
@@ -209,7 +204,6 @@ header a.nav-link {
     background: #fff url(../img/banner-image.jpg) no-repeat bottom right;
     background-size: contain;
     background-position-x: 110%;
-    /* margin-top: 120px; */
 }
 
 .banner:before {
@@ -226,9 +220,7 @@ background: linear-gradient(90deg, rgba(246,192,67,1) 0%, rgba(255,150,52,1) 100
 .banner img {
     width: 100%;
 }
-.caption {
-    /* padding: 5em 5em 0 0; */
-}
+
 .banner .caption h1 {
     font-weight: 900;
     font-size: 3em;
@@ -323,7 +315,6 @@ background: linear-gradient(90deg, rgba(246,192,67,1) 0%, rgba(255,150,52,1) 100
     top: 14px;
     border-radius: 50px;
 }
-
 /**Banner End**/
 
 /* About Start */
@@ -395,9 +386,8 @@ background: linear-gradient(90deg, rgba(246,192,67,1) 0%, rgba(255,150,52,1) 100
 }
 /* Smart scalable End */
 
+
 /* Timeline Start */
-
-
 .circle-with-arrow {
     position: relative;
     width: 4rem;
@@ -410,7 +400,6 @@ background: linear-gradient(90deg, rgba(246,192,67,1) 0%, rgba(255,150,52,1) 100
     top: 100%;
     left: calc(50% - 1px)
 }
-
 .circle-with-arrow-line .grow-line {
     content: "";
     position: absolute;
@@ -424,7 +413,6 @@ background: linear-gradient(90deg, rgba(246,192,67,1) 0%, rgba(255,150,52,1) 100
     background: linear-gradient(180deg, #67e0f7, #6cdbb7);
     background-attachment: fixed;
 }
-
 .timeline-content p{
     font-size: 1.2em;
     font-weight: 500;
@@ -465,7 +453,6 @@ background: linear-gradient(90deg, rgba(246,192,67,1) 0%, rgba(255,150,52,1) 100
 .discover-sec .timeline-img img{
     transform: translate(-25%, 10%);
 }
-
 .timeline-img .ira-box, .timeline-img .ira-reply{
     font-size: 0.7em;
     margin-bottom: 10px;
@@ -485,7 +472,6 @@ background: linear-gradient(90deg, rgba(246,192,67,1) 0%, rgba(255,150,52,1) 100
     font-weight: 400;
     font-size: 0.9em;
 }
-
 /* Timeline End */
 
 
@@ -500,7 +486,6 @@ background: linear-gradient(90deg, rgba(246,192,67,1) 0%, rgba(255,150,52,1) 100
     bottom: 100px;
     width: 60%;
     margin: 0 auto;
-    
 }
 .img-input input {
     padding: 20px 55px;
@@ -785,7 +770,9 @@ footer h5{
 }
 
 @media only screen and (min-width:1920px) {
-    
+    .caption{
+        padding: 1em 5em 0 0;
+    }
 }
 
 @media only screen and (max-width: 1024px) {
