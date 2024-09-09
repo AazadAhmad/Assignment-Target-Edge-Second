@@ -21,7 +21,21 @@
 //    lastScrollTop = st;
 // });
 
+
+
+
+
+
+
 $(document).ready(function () {
+  $('.burger').click(function () {
+    $('.burger').toggleClass('clicked');
+    $('.navbar-collapse').toggleClass('navbar-collapse-open');
+  });
+  $('.nav-link').click(function () {
+      $('.show').toggleClass('show');
+      $('.burger').removeClass('clicked');
+  });
 
   var featured_slider = new Swiper(".featured-slider", {
     spaceBetween: 0,
@@ -187,6 +201,22 @@ $(document).ready(function () {
   //       toggleActions: "play none none none"
   //   }
   // });
+
+
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".timeline",     
+      scrub: 1,               
+      start: "top 50%",         
+      end: "bottom+=1000 top",     
+    }
+  });
+  
+  tl.to('.grow-line', {
+    scaleY: 1,                  
+    ease: "none",              
+    duration: 1                 
+  });
 
 
 })
