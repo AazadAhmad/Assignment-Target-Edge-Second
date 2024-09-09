@@ -1,14 +1,33 @@
 
+// var lastScrollTop = 0;
+// $(window).scroll(function(event){
+//    var st = $(this).scrollTop();
+//    if (st > lastScrollTop){
+//       $('header').removeClass('fixed');
+//        $('header').addClass('no-fixed');
+//    } else {
+//       $('header').addClass('fixed');
+//        $('header').removeClass('no-fixed');
+//    }
+//    lastScrollTop = st;
+// });
 var lastScrollTop = 0;
 $(window).scroll(function(event){
    var st = $(this).scrollTop();
-   if (st > lastScrollTop){
+   
+   if (st === 0) {
+      // Remove 'fixed' class when at the top
+      $('header').removeClass('fixed no-fixed');
+   } else if (st > lastScrollTop) {
+      // Scrolling down
       $('header').removeClass('fixed');
-       $('header').addClass('no-fixed');
+      $('header').addClass('no-fixed');
    } else {
+      // Scrolling up
       $('header').addClass('fixed');
-       $('header').removeClass('no-fixed');
+      $('header').removeClass('no-fixed');
    }
+   
    lastScrollTop = st;
 });
 
@@ -205,5 +224,6 @@ $(document).ready(function () {
     duration: 1                 
   });
 
+  
 
 })
