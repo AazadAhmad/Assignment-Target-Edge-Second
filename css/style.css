@@ -208,13 +208,13 @@ header a.nav-link {
 
 .banner:before {
     content: "";
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     background: rgb(246,192,67);
 background: linear-gradient(90deg, rgba(246,192,67,1) 0%, rgba(255,150,52,1) 100%);
     position: absolute;
-    right: 50px;
-    bottom: 55px;
+    right: 0.5em;
+    bottom: 3.6em;
     border-radius: 50px;
 }
 .banner img {
@@ -770,8 +770,14 @@ footer h5{
 }
 
 @media only screen and (min-width:1920px) {
+    .banner{
+        background-position-x: 100%;
+    }
     .caption{
-        padding: 1em 5em 0 0;
+        padding: 7em 5em 0 0;
+    }
+    .ira{
+        transform: translate(55%, -75%);
     }
 }
 
