@@ -1,36 +1,23 @@
-// $(window).scroll(function () {
-//   var scroll = $(window).scrollTop();
-//   if (scroll >= 35) {
-//     $("header").addClass("sticky");
-//   } else {
-//     $("header").removeClass("sticky");
-//   }
-// });
 
-
-// var lastScrollTop = 0;
-// $(window).scroll(function(event){
-//    var st = $(this).scrollTop();
-//    if (st > lastScrollTop){
-//       $('header').removeClass('fixed');
-//        $('header').addClass('no-fixed');
-//    } else {
-//       $('header').addClass('fixed');
-//        $('header').removeClass('no-fixed');
-//    }
-//    lastScrollTop = st;
-// });
-
-
-
-
+var lastScrollTop = 0;
+$(window).scroll(function(event){
+   var st = $(this).scrollTop();
+   if (st > lastScrollTop){
+      $('header').removeClass('fixed');
+       $('header').addClass('no-fixed');
+   } else {
+      $('header').addClass('fixed');
+       $('header').removeClass('no-fixed');
+   }
+   lastScrollTop = st;
+});
 
 
 
 $(document).ready(function () {
   $('.burger').click(function () {
     $('.burger').toggleClass('clicked');
-    $('.navbar-collapse').toggleClass('navbar-collapse-open');
+    // $('.navbar-collapse').slideToggle('navbar-collapse-open');
   });
   $('.nav-link').click(function () {
       $('.show').toggleClass('show');
