@@ -89,7 +89,8 @@ $(document).ready(function () {
       stagger: 0.1,
       scrollTrigger: {
         trigger: heading,
-        start: "top 80%"
+        start: "top 90%",
+        toggleActions: "play none none reverse"
       }
     });
   });
@@ -106,7 +107,7 @@ $(document).ready(function () {
       scrollTrigger: {
         trigger: description,
         start: "top 80%",
-        toggleActions: "play none none none"
+        toggleActions: "play none none reverse"
       }
     });
   });
@@ -125,32 +126,7 @@ $(document).ready(function () {
     });
   });
 
-  // gsap.from(".ira", {
-  //   x: "-10%",
-  //   opacity: 0,
-  //   duration: 1,
-  //   ease: "power1.out",
-  //   stagger: 1,  
-  //   scrollTrigger: {
-  //       trigger: ".ira",
-  //       start: "left 100%",
-  //       toggleActions: "play none none none"
-  //   }
-  // });
-
-  // gsap.from('.logo-animation', {
-  //   y: '30%',
-  //   opacity: 0,
-  //   duration: 1,
-  //   ease: 'power1.out',
-  //   stagger: 0.5,
-  //   scrollTrigger: {
-  //     trigger: '.logo-animation',
-  //     start: 'top center',
-  //   }
-  // })
-
-
+ 
   document.querySelectorAll(".btn-animate").forEach((button) => {
     gsap.from(button, {
       y: "50%",
@@ -160,7 +136,7 @@ $(document).ready(function () {
       scrollTrigger: {
         trigger: button,
         start: "top 90%",
-        toggleActions: "play none none none"
+        toggleActions: "play none none reverse"
       }
     });
   });
@@ -176,7 +152,7 @@ $(document).ready(function () {
       scrollTrigger: {
         trigger: box,
         start: "left 80%",
-        toggleActions: "play none none none"
+        toggleActions: "play none none reverse"
       }
     });
   });
@@ -189,7 +165,7 @@ $(document).ready(function () {
       scrollTrigger: {
         trigger: img,
         start: "top 80%",
-        toggleActions: "play none none none"
+        toggleActions: "play none none reverse"
       }
     });
   });
