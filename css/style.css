@@ -1053,6 +1053,9 @@ footer h5{
         position: static;
         transform: unset;
     }
+    .caption input {
+        width: 100%;
+    }
     .partners, .performer, .featured ul{
         flex-wrap: wrap;
     }
