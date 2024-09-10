@@ -206,7 +206,7 @@ header a.nav-link {
 
 /**Banner Start**/
 .banner {
-    background: #fff url(../img/banner-image.jpg) no-repeat bottom right;
+    background: #fff url(../img/banner-image.webp) no-repeat bottom right;
     background-size: contain;
     background-position-x: 110%;
 }
