@@ -59,7 +59,7 @@ $(document).ready(function () {
   });
 
   document.querySelectorAll("[Heading]").forEach((heading) => {
-    new SplitType(heading, { types: "lines, words, chars", tagName: "c" });
+    new SplitType(heading, { types: "lines, words", });
     gsap.from(heading.querySelectorAll(".word"), {
       y: "100%",
       opacity: 0,
@@ -75,7 +75,7 @@ $(document).ready(function () {
   });
 
   document.querySelectorAll("[description]").forEach((description) => {
-    new SplitType(description, { types: "lines, words, chars", tagName: "c" });
+    new SplitType(description, { types: "lines, words",  });
     gsap.from(description.querySelectorAll(".line"), {
       y: "100%",
       opacity: 0,
