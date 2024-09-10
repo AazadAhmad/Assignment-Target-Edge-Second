@@ -1,28 +1,14 @@
-// var lastScrollTop = 0;
-// $(window).scroll(function(event){
-//    var st = $(this).scrollTop();
-//    if (st > lastScrollTop){
-//       $('header').removeClass('fixed');
-//        $('header').addClass('no-fixed');
-//    } else {
-//       $('header').addClass('fixed');
-//        $('header').removeClass('no-fixed');
-//    }
-//    lastScrollTop = st;
-// });
+
 var lastScrollTop = 0;
 $(window).scroll(function (event) {
   var st = $(this).scrollTop();
 
   if (st === 0) {
-    // Remove 'fixed' class when at the top
     $("header").removeClass("fixed no-fixed");
   } else if (st > lastScrollTop) {
-    // Scrolling down
     $("header").removeClass("fixed");
     $("header").addClass("no-fixed");
   } else {
-    // Scrolling up
     $("header").addClass("fixed");
     $("header").removeClass("no-fixed");
   }
@@ -33,7 +19,6 @@ $(window).scroll(function (event) {
 $(document).ready(function () {
   $(".burger").click(function () {
     $(".burger").toggleClass("clicked");
-    // $('.navbar-collapse').slideToggle('navbar-collapse-open');
   });
   $(".nav-link").click(function () {
     $(".show").toggleClass("show");
@@ -160,18 +145,7 @@ $(document).ready(function () {
     });
   });
 
-  // gsap.from(".buy-it", {
-  //   y: "100%",
-  //   opacity: 0,
-  //   duration: 1,
-  //   ease: "power1.out",
-  //   stagger: 0.2,
-  //   scrollTrigger: {
-  //       trigger: ".buy-it",
-  //       start: "top 100%",
-  //       toggleActions: "play none none none"
-  //   }
-  // });
+
 
   let tl = gsap.timeline({
     scrollTrigger: {
@@ -187,4 +161,15 @@ $(document).ready(function () {
     ease: "none",
     duration: 1,
   });
+
+
+
+  $(".chat").click(function () {
+    $(".chat-box").show();
+  });
+  $(".minimize").click(function () {
+    $(".chat-box").hide();
+  });
+
+
 });
