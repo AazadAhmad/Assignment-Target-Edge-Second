@@ -16,6 +16,120 @@ $(window).scroll(function (event) {
   lastScrollTop = st;
 });
 
+
+
+var options = {
+  series: [
+    {
+      data: [1, 20, 2, 40, 3, 10, 5]
+    }
+  ],
+  chart: {
+    type: "area",
+    height: 200,
+    background: "#fff",
+    dropShadow: {
+      enabled: false,
+    },
+    toolbar: {
+      show: false
+    },
+  },
+  dataLabels: {
+    enabled: false
+  },
+  markers: {
+    colors: ["#ec4a77"]
+  },
+  stroke: {
+    curve: "smooth",
+    width: 3,
+    fill: {
+      type: "gradient",
+      gradient: {
+        type: "horizontal",
+        colorStops: [
+          [
+            {
+              offset: 0,
+              color: "#ec4a77",
+              opacity: 1
+            },
+            {
+              offset: 33,
+              color: "#ff70c6",
+              opacity: 1
+            }
+          ]
+        ]
+      }
+    }
+  },
+  fill: {
+    type: "gradient",
+    gradient: {
+      shadeIntensity: 1,
+      type: "vertical",
+      colorStops: [
+        [
+          {
+            offset: 0,
+            color: "#ff70c6",
+            opacity: 0.5
+          },
+          {
+            offset: 70,
+            color: "#ff70c6",
+            opacity: 0.5
+          },
+          {
+            offset: 97,
+            color: "#ff70c6",
+            opacity: 0.5
+          }
+        ]
+      ]
+    }
+  },
+  xaxis: {
+    axisBorder: {
+      show: false
+    },
+    axisTicks: {
+      show: false
+    },
+    labels: {
+      show: false,
+    }
+  },
+  yaxis: {
+    show: false,
+    labels: {
+      show: false
+    }
+  },
+  grid: {
+    strokeDashArray: 0,
+    lines: {
+      show: false
+    },
+    padding: {
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 0
+    },
+    borderColor: "#f1f1f1"
+  },
+ 
+};
+
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+chart.render();
+
+
+
+
 $(document).ready(function () {
   $(".burger").click(function () {
     $(".burger").toggleClass("clicked");
@@ -75,7 +189,7 @@ $(document).ready(function () {
   });
 
   document.querySelectorAll("[description]").forEach((description) => {
-    new SplitType(description, { types: "lines, words",  });
+    new SplitType(description, { types: "lines, words", });
     gsap.from(description.querySelectorAll(".line"), {
       y: "100%",
       opacity: 0,
@@ -170,6 +284,11 @@ $(document).ready(function () {
   $(".minimize").click(function () {
     $(".chat-box").hide();
   });
+
+
+
+
+
 
 
 });

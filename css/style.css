@@ -552,6 +552,10 @@ header a.nav-link {
     font-size: 0.9em;
 }
 
+#chart {
+    width: 100%;
+  }
+
 /* Timeline End */
 
 /* Forethought Start */
