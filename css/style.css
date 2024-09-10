@@ -655,7 +655,7 @@ header a.nav-link {
 .swiper-slide p {
     padding-top: 15px;
     font-weight: 500;
-    font-size: 1.125em;
+    font-size: 0.8em;
     line-height: 1.8;
     color: #737373;
 }
@@ -907,6 +907,9 @@ span.minimize {
     .support:after {
         width: 60%;
         height: 410px;
+    }
+    .swiper-slide p{
+        font-size: 1.125em;
     }
 }
 
@@ -1231,7 +1234,7 @@ span.minimize {
         width: 100%;
     }
     .img-input input {
-        padding: 10px 20px 10px 40px;
+        padding: 10px 20px 10px 55px;
     }
     .img-input button {
         left: 10px;
@@ -1258,6 +1261,7 @@ span.minimize {
     }
     .chat-box {
         height: 50%;
+        max-width: 300px;
     }
 
 
